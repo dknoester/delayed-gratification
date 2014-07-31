@@ -22,7 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		421ADE3D197BEA1B007EDE79 /* libea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421ADE3C197BEA1B007EDE79 /* libea.a */; };
-		42A1609316B82FDB0007755C /* all_ones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F4EE6916AEE845000123A4 /* all_ones.cpp */; };
+		4277BE4E198A63EB00B8F54B /* libea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 421ADE3C197BEA1B007EDE79 /* libea.a */; };
+		4277BE58198A655A00B8F54B /* logic9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4277BE56198A655A00B8F54B /* logic9.cpp */; };
+		42A1609316B82FDB0007755C /* benchmarks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F4EE6916AEE845000123A4 /* benchmarks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4277BE4F198A63EB00B8F54B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		42F4EE6216AEE80D000123A4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,11 +63,23 @@
 		421ADE3E197BEA48007EDE79 /* all_ones.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = all_ones.cfg; sourceTree = "<group>"; };
 		42441B3E15862E1B009863BE /* Jamroot */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jamroot; sourceTree = "<group>"; };
 		42706B11166AF51C003FB2E3 /* template.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = template.xcconfig; sourceTree = "<group>"; };
-		42F4EE6616AEE80D000123A4 /* template-all-ones */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "template-all-ones"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42F4EE6916AEE845000123A4 /* all_ones.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = all_ones.cpp; sourceTree = "<group>"; };
+		4277BE53198A63EB00B8F54B /* delayed-gratification-avida4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "delayed-gratification-avida4"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4277BE54198A645700B8F54B /* analysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = analysis.h; sourceTree = "<group>"; };
+		4277BE55198A645700B8F54B /* delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delay.h; sourceTree = "<group>"; };
+		4277BE56198A655A00B8F54B /* logic9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logic9.cpp; sourceTree = "<group>"; };
+		42F4EE6616AEE80D000123A4 /* delayed-gratification-all-ones */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "delayed-gratification-all-ones"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F4EE6916AEE845000123A4 /* benchmarks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = benchmarks.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4277BE4D198A63EB00B8F54B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4277BE4E198A63EB00B8F54B /* libea.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42F4EE5E16AEE80D000123A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,7 +105,8 @@
 		4244197115859482009863BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42F4EE6616AEE80D000123A4 /* template-all-ones */,
+				42F4EE6616AEE80D000123A4 /* delayed-gratification-all-ones */,
+				4277BE53198A63EB00B8F54B /* delayed-gratification-avida4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +123,10 @@
 		42441A01158613F5009863BE /* src */ = {
 			isa = PBXGroup;
 			children = (
-				42F4EE6916AEE845000123A4 /* all_ones.cpp */,
+				4277BE54198A645700B8F54B /* analysis.h */,
+				4277BE55198A645700B8F54B /* delay.h */,
+				42F4EE6916AEE845000123A4 /* benchmarks.cpp */,
+				4277BE56198A655A00B8F54B /* logic9.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -116,9 +143,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42F4EE5B16AEE80D000123A4 /* template-all-ones */ = {
+		4277BE4A198A63EB00B8F54B /* delayed-gratification-avida4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "template-all-ones" */;
+			buildConfigurationList = 4277BE50198A63EB00B8F54B /* Build configuration list for PBXNativeTarget "delayed-gratification-avida4" */;
+			buildPhases = (
+				4277BE4B198A63EB00B8F54B /* Sources */,
+				4277BE4D198A63EB00B8F54B /* Frameworks */,
+				4277BE4F198A63EB00B8F54B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "delayed-gratification-avida4";
+			productName = "ocr-single";
+			productReference = 4277BE53198A63EB00B8F54B /* delayed-gratification-avida4 */;
+			productType = "com.apple.product-type.tool";
+		};
+		42F4EE5B16AEE80D000123A4 /* delayed-gratification-benchmarks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "delayed-gratification-benchmarks" */;
 			buildPhases = (
 				42F4EE5C16AEE80D000123A4 /* Sources */,
 				42F4EE5E16AEE80D000123A4 /* Frameworks */,
@@ -128,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = "template-all-ones";
+			name = "delayed-gratification-benchmarks";
 			productName = "ocr-single";
-			productReference = 42F4EE6616AEE80D000123A4 /* template-all-ones */;
+			productReference = 42F4EE6616AEE80D000123A4 /* delayed-gratification-all-ones */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +185,7 @@
 			attributes = {
 				ORGANIZATIONNAME = "Michigan State University";
 			};
-			buildConfigurationList = 4244196A15859482009863BE /* Build configuration list for PBXProject "template" */;
+			buildConfigurationList = 4244196A15859482009863BE /* Build configuration list for PBXProject "delayed-gratification" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -154,17 +198,26 @@
 			projectRoot = "";
 			targets = (
 				42720F6F163823AF008C8E63 /* all */,
-				42F4EE5B16AEE80D000123A4 /* template-all-ones */,
+				42F4EE5B16AEE80D000123A4 /* delayed-gratification-benchmarks */,
+				4277BE4A198A63EB00B8F54B /* delayed-gratification-avida4 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4277BE4B198A63EB00B8F54B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4277BE58198A655A00B8F54B /* logic9.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42F4EE5C16AEE80D000123A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A1609316B82FDB0007755C /* all_ones.cpp in Sources */,
+				42A1609316B82FDB0007755C /* benchmarks.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +226,7 @@
 /* Begin PBXTargetDependency section */
 		42A160C516B87E2F0007755C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 42F4EE5B16AEE80D000123A4 /* template-all-ones */;
+			target = 42F4EE5B16AEE80D000123A4 /* delayed-gratification-benchmarks */;
 			targetProxy = 42A160C416B87E2F0007755C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -205,6 +258,18 @@
 			};
 			name = Release;
 		};
+		4277BE51198A63EB00B8F54B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4277BE52198A63EB00B8F54B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
 		42F4EE6416AEE80D000123A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -220,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4244196A15859482009863BE /* Build configuration list for PBXProject "template" */ = {
+		4244196A15859482009863BE /* Build configuration list for PBXProject "delayed-gratification" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4244197815859482009863BE /* Debug */,
@@ -238,7 +303,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "template-all-ones" */ = {
+		4277BE50198A63EB00B8F54B /* Build configuration list for PBXNativeTarget "delayed-gratification-avida4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4277BE51198A63EB00B8F54B /* Debug */,
+				4277BE52198A63EB00B8F54B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42F4EE6316AEE80D000123A4 /* Build configuration list for PBXNativeTarget "delayed-gratification-benchmarks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42F4EE6416AEE80D000123A4 /* Debug */,
