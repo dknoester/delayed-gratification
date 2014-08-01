@@ -26,8 +26,7 @@
 
 #include <ea/datafile.h>
 #include <ea/metadata.h>
-
-
+#include <ea/line_of_descent.h>
 using namespace ealib;
 
 LIBEA_MD_DECL(DELAY_GENERATIONS, "delay.generations", int);

@@ -19,8 +19,6 @@
  */
 #include <ea/digital_evolution.h>
 #include <ea/cmdline_interface.h>
-using namespace ealib;
-
 #include "delay.h"
 
 struct lifecycle : public default_lifecycle {
@@ -88,7 +86,6 @@ struct lifecycle : public default_lifecycle {
     }
 };
 
-
 typedef digital_evolution
 < lifecycle
 , recombination::asexual
@@ -97,7 +94,7 @@ typedef digital_evolution
 , random_neighbor
 , dont_stop
 , generate_single_ancestor
-, default_lod_devo_traits
+, lod_trait
 > ea_type;
 
 template <typename EA>
